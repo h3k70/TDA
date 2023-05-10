@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: e244a12e4e7027748a28164513a96717
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _icon: {fileID: 21300000, guid: 25d9167e34adaeb408ebb326d4e963f7, type: 3}
+  - _grenadeTeamplate: {fileID: 5660116877592530592, guid: 05e502d81973f524e8dc41d33b509d43, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
