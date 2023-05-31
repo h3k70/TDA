@@ -8,6 +8,7 @@ public abstract class Skill : MonoBehaviour
 {
     [SerializeField] private float _calldownTime = 10;
     [SerializeField] private Sprite _icon;
+    [SerializeField] private string _description;
 
     protected const float ClickDistance = 100;
 
@@ -17,6 +18,7 @@ public abstract class Skill : MonoBehaviour
 
     public bool IsReady => _isReady;
     public Sprite Icon => _icon;
+    public string Description => _description;
     protected Animator Animator => _animator;
     protected LayerMask LayerMaskClick => _layerMaskClick;
 

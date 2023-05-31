@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private Building _target;
+    [SerializeField] private UnityEvent _allEnemyKilled;
     [SerializeField] private List<SpawnPoint> _spawnPoints = new List<SpawnPoint>();
     [SerializeField] private List<Wave> _waves;
 
@@ -17,8 +18,6 @@ public class Spawner : MonoBehaviour
     private int _allCountSpawned;
     private int _numberOfKilled;
     private bool _IsAllSpawned = false;
-
-    public event UnityAction AllEnemyKilled;
 
     public void StartNextWave()
     {
@@ -37,7 +36,7 @@ public class Spawner : MonoBehaviour
 
         if (_IsAllSpawned == true && _allCountSpawned == _numberOfKilled)
         {
-            AllEnemyKilled?.Invoke();
+            _allEnemyKilled?.Invoke();
         }
     }
 

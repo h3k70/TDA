@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using static UnityEngine.GraphicsBuffer;
 
 [RequireComponent(typeof(AffectedAreaDrawer))]
-public abstract class Throw : Skill
+public abstract class AreaSkill : Skill
 {
     [SerializeField] private float _radiusDefeat = 5f;
 

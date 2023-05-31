@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7f03de11176858542a24f904c9a5a9ad
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _icon: {fileID: 21300000, guid: 351e3ac09305e664db0494d7d6b804b7, type: 3}
+  - _slashParticaleTemplate: {fileID: 305841288057985082, guid: 8e223081dd477b241995a881183f03e9, type: 3}
+  - _trailTemplate: {fileID: 7051297978650126566, guid: ead5530e21677b14ca5b6ccd526b827e, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using static UnityEngine.GraphicsBuffer;
 
 [RequireComponent(typeof(AffectedAreaDrawer))]
-public class ShurikenThrow : Throw
+public class ShurikenThrow : AreaSkill
 {
     [SerializeField] private Shuriken _shurikenTeamplate;
 

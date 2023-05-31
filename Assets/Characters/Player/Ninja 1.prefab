@@ -825,6 +825,9 @@ GameObject:
   - component: {fileID: 5452223578409506292}
   - component: {fileID: 706551628985848803}
   - component: {fileID: 7648873814755483115}
+  - component: {fileID: 9117644296103374592}
+  - component: {fileID: 3041801623212990681}
+  - component: {fileID: 8209404048990989294}
   m_Layer: 0
   m_Name: Ninja 1
   m_TagString: Untagged
@@ -910,6 +913,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _calldownTime: 0
   _icon: {fileID: 0}
+  _description: 
+--- !u!114 &9117644296103374592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8335955560837383164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e3c8307acb3a834ba57e5e1584424a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _affectedAreaTeamplate: {fileID: 8313888996285311706, guid: 5981baa2d2e337c4bb19423743523d8f, type: 3}
+--- !u!114 &3041801623212990681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8335955560837383164}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a45e14a45c294dc4a8b1584b83222af0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _calldownTime: 10
+  _icon: {fileID: 21300000, guid: a4abc30b0efc6e64ebdac34a519a16d8, type: 3}
+  _description: 
+  _radiusDefeat: 5
+  _shurikenTeamplate: {fileID: 5608718049240202919, guid: 2ef789c45f10b664792ff44380a8f204, type: 3}
+--- !u!114 &8209404048990989294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8335955560837383164}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e244a12e4e7027748a28164513a96717, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _calldownTime: 10
+  _icon: {fileID: 21300000, guid: 25d9167e34adaeb408ebb326d4e963f7, type: 3}
+  _description: 
+  _radiusDefeat: 5
+  _grenadeTeamplate: {fileID: 5660116877592530592, guid: 05e502d81973f524e8dc41d33b509d43, type: 3}
 --- !u!1 &9035187648112993200
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,6 +1043,22 @@ PrefabInstance:
     - target: {fileID: 5393455988035819711, guid: 7fbec081f60a0014ba710d554146281e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -91.770996
+      objectReference: {fileID: 0}
+    - target: {fileID: 6485789850688490974, guid: 7fbec081f60a0014ba710d554146281e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6485789850688490974, guid: 7fbec081f60a0014ba710d554146281e, type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6499329203156152313, guid: 7fbec081f60a0014ba710d554146281e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6499329203156152313, guid: 7fbec081f60a0014ba710d554146281e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -18.2
       objectReference: {fileID: 0}
     - target: {fileID: 8592172120325384411, guid: 7fbec081f60a0014ba710d554146281e, type: 3}
       propertyPath: lengthInSec

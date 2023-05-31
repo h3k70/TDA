@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SmokeThrow : Throw
+public class SmokeThrow : AreaSkill
 {
     [SerializeField] private SmokeGrenade _grenadeTeamplate;
 

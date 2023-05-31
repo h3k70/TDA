@@ -7,7 +7,9 @@ public class BaseAttack : Skill
     private float _checkRadius = 2f;
     private float _rangeAttack = 2f;
     private float _distanceForJump = 15f;
-    private Collider _swordCollider;
+    private float _durationFarJump = 1;
+    private float _durationNearJump = 0.5f;
+    private Sword _sword;
     private Enemy _target;
     private float _distance;
     private Vector3 _direction;
@@ -16,7 +18,7 @@ public class BaseAttack : Skill
 
     protected override void Awake()
     {
-        _swordCollider = GetComponentInChildren<Sword>().GetComponent<Collider>();
+        _sword = GetComponentInChildren<Sword>();
         SetLayerMaskClick(LayerMask.GetMask("Enemy"));
         base.Awake();
     }
@@ -31,12 +33,12 @@ public class BaseAttack : Skill
         if (_distance < _distanceForJump)
         {
             Animator.SetTrigger(HashAnimationNinja.SwitchTargetNear);
-            _jumpToTargetJob = StartCoroutine(JumpToTarget(0.5f));
+            _jumpToTargetJob = StartCoroutine(JumpToTarget(_durationNearJump));
         }
         else
         {
             Animator.SetTrigger(HashAnimationNinja.SwitchTargetFar);
-            _jumpToTargetJob = StartCoroutine(JumpToTarget(1));
+            _jumpToTargetJob = StartCoroutine(JumpToTarget(_durationFarJump));
         }
         return true;
     }
@@ -46,8 +48,19 @@ public class BaseAttack : Skill
         _target.TakeStun(_stunDuration);
     }
 
+    private bool IsTargetInAttackRadius()
+    {
+        _direction = _target.transform.position - transform.position;
+        _distance = _direction.magnitude;
+
+        return _distance <= _rangeAttack;
+    }
+
     private IEnumerator JumpToTarget(float duration)
     {
+        if (_attackTargetJob != null)
+            StopCoroutine(_attackTargetJob);
+
         transform.LookAt(_target.transform);
 
         while (transform.position != _direction)
@@ -68,27 +81,21 @@ public class BaseAttack : Skill
 
     private IEnumerator AttackTarget()
     {
-        while (_target.IsAlive && _target != null)
+        while (_target.IsAlive && _target != null && IsTargetInAttackRadius())
         {
-            while (_target.IsAlive && _target != null)
+            while (_target.IsAlive && _target != null && IsTargetInAttackRadius())
             {
                 transform.LookAt(_target.transform);
 
                 if (Animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
                 {
-                    _swordCollider.enabled = true;
-                    int chance = Random.Range(0, 100);
-                    if(0 <= chance && chance < 40)
-                        Animator.Play(HashAnimationNinja.Combo1);
-                    else if (40 <= chance && chance < 80)
-                        Animator.Play(HashAnimationNinja.Combo2);
-                    else
-                        Animator.Play(HashAnimationNinja.Combo3);
+                    _sword.MakeAttacking();
+                    Animator.Play(HashAnimationNinja.Combo2);
                 }
                 yield return null;
             }
             Animator.SetTrigger(HashAnimationNinja.TargetDead);
-            _swordCollider.enabled = false;
+            _sword.MakeNotAttacking();
 
             Collider[] hits;
             hits = Physics.OverlapSphere(transform.position, _checkRadius, LayerMaskClick);

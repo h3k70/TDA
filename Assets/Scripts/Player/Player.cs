@@ -28,19 +28,5 @@ public class Player : MonoBehaviour
         {
             _skills.TryUseSkill();
         }
-        //------------------------------
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            _skills.TrySetActiveSkill(0);
-        }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            _skills.TrySetActiveSkill(1);
-        }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            _skills.TrySetActiveSkill(2);
-        }
-        //------------------------------
     }
 }

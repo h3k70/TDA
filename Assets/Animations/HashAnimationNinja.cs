@@ -10,6 +10,7 @@ public class HashAnimationNinja
     public static int DaggerThrow = Animator.StringToHash("DaggerThrow");
     public static int SmokeThrow = Animator.StringToHash("SmokeThrow");
     public static int TargetDead = Animator.StringToHash("IsTargetDead");
+    public static int BlitzAttack = Animator.StringToHash("BlitzAttack");
 
     //Animation Name
     public static int Combo1 = Animator.StringToHash("Combo 1");
