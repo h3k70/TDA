@@ -5,18 +5,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using static UnityEngine.GraphicsBuffer;
 
-[RequireComponent(typeof(AffectedAreaDrawer))]
 public class ShurikenThrow : AreaSkill
 {
+    [SerializeField] private LayerMask _layerMaskForTarget;
     [SerializeField] private Shuriken _shurikenTeamplate;
 
-    private LayerMask _layerMaskTarget;
     private Collider[] _enemies;
     private Transform _hand;
 
     protected override void Awake()
     {
-        _layerMaskTarget = LayerMask.GetMask("Enemy");
         _hand = GetComponent<Player>().RightHand.transform;
         base.Awake();
     }
@@ -31,7 +29,7 @@ public class ShurikenThrow : AreaSkill
 
     protected override bool Use(RaycastHit raycastHit)
     {
-        _enemies = Physics.OverlapSphere(raycastHit.point, RadiusDefeat, _layerMaskTarget);
+        _enemies = Physics.OverlapSphere(raycastHit.point, RadiusDefeat, _layerMaskForTarget);
 
         if (_enemies.Length > 0)
         {

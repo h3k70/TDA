@@ -4,8 +4,10 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Animator))]
 public abstract class Skill : MonoBehaviour
 {
+    [SerializeField] private LayerMask _layerMaskClick;
     [SerializeField] private float _calldownTime = 10;
     [SerializeField] private Sprite _icon;
     [SerializeField] private string _description;
@@ -14,7 +16,6 @@ public abstract class Skill : MonoBehaviour
 
     private Animator _animator;
     private bool _isReady = true;
-    private LayerMask _layerMaskClick;
 
     public bool IsReady => _isReady;
     public Sprite Icon => _icon;
@@ -28,11 +29,6 @@ public abstract class Skill : MonoBehaviour
     protected virtual void Awake()
     {
         _animator = GetComponent<Animator>();
-    }
-
-    protected void SetLayerMaskClick(LayerMask layerMaskClick)
-    {
-        _layerMaskClick = layerMaskClick;
     }
 
     public void Use()

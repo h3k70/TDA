@@ -19,7 +19,6 @@ public class BaseAttack : Skill
     protected override void Awake()
     {
         _sword = GetComponentInChildren<Sword>();
-        SetLayerMaskClick(LayerMask.GetMask("Enemy"));
         base.Awake();
     }
 

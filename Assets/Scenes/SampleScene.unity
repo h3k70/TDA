@@ -737,7 +737,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5452223578409506292, guid: 1a9d5312e0cc47b40a784d6f8bc639e2, type: 3}
   m_PrefabInstance: {fileID: 5452223578822444159}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5452223578822444160}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c46c7bea6b447446a3b869254f643c2, type: 3}
@@ -1077,7 +1077,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 706551628985848803, guid: 1a9d5312e0cc47b40a784d6f8bc639e2, type: 3}
   m_PrefabInstance: {fileID: 5452223578822444159}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5452223578822444160}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0937e4076316cf4fb5fab5181be13b6, type: 3}
@@ -1088,7 +1088,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8209404048990989294, guid: 1a9d5312e0cc47b40a784d6f8bc639e2, type: 3}
   m_PrefabInstance: {fileID: 5452223578822444159}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5452223578822444160}
+  m_GameObject: {fileID: 0}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e244a12e4e7027748a28164513a96717, type: 3}
@@ -1099,7 +1099,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3041801623212990681, guid: 1a9d5312e0cc47b40a784d6f8bc639e2, type: 3}
   m_PrefabInstance: {fileID: 5452223578822444159}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5452223578822444160}
+  m_GameObject: {fileID: 0}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a45e14a45c294dc4a8b1584b83222af0, type: 3}
@@ -2282,22 +2282,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 706551628985848803, guid: 1a9d5312e0cc47b40a784d6f8bc639e2, type: 3}
-      propertyPath: _skillsCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3041801623212990681, guid: 1a9d5312e0cc47b40a784d6f8bc639e2, type: 3}
-      propertyPath: _description
-      value: Kills small units and cripples bosses
-      objectReference: {fileID: 0}
-    - target: {fileID: 3041801623212990681, guid: 1a9d5312e0cc47b40a784d6f8bc639e2, type: 3}
-      propertyPath: _calldownTime
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3041801623212990681, guid: 1a9d5312e0cc47b40a784d6f8bc639e2, type: 3}
-      propertyPath: _radiusDefeat
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 5040683236296061423, guid: 1a9d5312e0cc47b40a784d6f8bc639e2, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2342,44 +2326,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8209404048990989294, guid: 1a9d5312e0cc47b40a784d6f8bc639e2, type: 3}
-      propertyPath: _description
-      value: Does not deal damage, but stuns
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209404048990989294, guid: 1a9d5312e0cc47b40a784d6f8bc639e2, type: 3}
-      propertyPath: _calldownTime
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209404048990989294, guid: 1a9d5312e0cc47b40a784d6f8bc639e2, type: 3}
-      propertyPath: _radiusDefeat
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8335955560837383164, guid: 1a9d5312e0cc47b40a784d6f8bc639e2, type: 3}
       propertyPath: m_Name
       value: Ninja
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a9d5312e0cc47b40a784d6f8bc639e2, type: 3}
---- !u!1 &5452223578822444160 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8335955560837383164, guid: 1a9d5312e0cc47b40a784d6f8bc639e2, type: 3}
+--- !u!114 &5452223578822444161 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5452223578822444161, guid: 1a9d5312e0cc47b40a784d6f8bc639e2, type: 3}
   m_PrefabInstance: {fileID: 5452223578822444159}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5452223578822444161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5452223578822444160}
+  m_GameObject: {fileID: 0}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f03de11176858542a24f904c9a5a9ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _calldownTime: 15
-  _icon: {fileID: 21300000, guid: 351e3ac09305e664db0494d7d6b804b7, type: 3}
-  _description: Blitz Attack
-  _radiusDefeat: 7
-  _damage: 10
-  _slashParticaleTemplate: {fileID: 305841288057985082, guid: 8e223081dd477b241995a881183f03e9, type: 3}

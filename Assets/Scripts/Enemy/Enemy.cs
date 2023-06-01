@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(EnemyStateMachine))]
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private GameObject _body;
@@ -84,14 +87,7 @@ public class Enemy : MonoBehaviour
 
     private IEnumerator CooldownAtStunned(float duration)
     {
-        float time = 0;
-
-        while(duration >= time)
-        {
-            time += Time.deltaTime;
-            yield return null;
-        }
+        yield return new WaitForSeconds(duration);
         _isStunned = false;
-        yield break;
     }
 }

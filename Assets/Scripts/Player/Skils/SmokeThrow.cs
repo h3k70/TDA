@@ -17,7 +17,8 @@ public class SmokeThrow : AreaSkill
 
     public void SpawnSmokeGrenade()
     {
-        Instantiate(_grenadeTeamplate, _hand.position, _grenadeTeamplate.transform.rotation, null).Init(_raycastHit.point, RadiusDefeat);
+        Instantiate(_grenadeTeamplate, _hand.position, _grenadeTeamplate.transform.rotation, null)
+            .Init(_raycastHit.point, RadiusDefeat);
     }
 
     protected override bool Use(RaycastHit raycastHit)

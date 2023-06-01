@@ -5,21 +5,14 @@ using static UnityEngine.GraphicsBuffer;
 
 public class BlitzAttack : AreaSkill
 {
+    [SerializeField] private LayerMask _layerMaskForTarget;
     [SerializeField] private int _damage = 10;
     [SerializeField] private ParticleSystem _slashParticaleTemplate;
-
-    private LayerMask _enemyLayerMask;
-
-    protected override void Awake()
-    {
-        _enemyLayerMask = LayerMask.GetMask("Enemy");
-        base.Awake();
-    }
 
     protected override bool Use(RaycastHit raycastHit)
     {
         Collider[] hits;
-        hits = Physics.OverlapSphere(raycastHit.point, RadiusDefeat, _enemyLayerMask);
+        hits = Physics.OverlapSphere(raycastHit.point, RadiusDefeat, _layerMaskForTarget);
 
         transform.LookAt(raycastHit.point);
         Animator.SetTrigger(HashAnimationNinja.BlitzAttack);

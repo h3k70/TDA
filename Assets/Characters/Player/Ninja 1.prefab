@@ -828,6 +828,7 @@ GameObject:
   - component: {fileID: 9117644296103374592}
   - component: {fileID: 3041801623212990681}
   - component: {fileID: 8209404048990989294}
+  - component: {fileID: 5452223578822444161}
   m_Layer: 0
   m_Name: Ninja 1
   m_TagString: Untagged
@@ -911,6 +912,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a764200ca675ce54486b422345c8ae35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _layerMaskClick:
+    serializedVersion: 2
+    m_Bits: 64
   _calldownTime: 0
   _icon: {fileID: 0}
   _description: 
@@ -939,10 +943,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a45e14a45c294dc4a8b1584b83222af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _calldownTime: 10
+  _layerMaskClick:
+    serializedVersion: 2
+    m_Bits: 128
+  _calldownTime: 7
   _icon: {fileID: 21300000, guid: a4abc30b0efc6e64ebdac34a519a16d8, type: 3}
-  _description: 
-  _radiusDefeat: 5
+  _description: Kills small units and cripples bosses
+  _radiusDefeat: 4
+  _layerMaskForTarget:
+    serializedVersion: 2
+    m_Bits: 64
   _shurikenTeamplate: {fileID: 5608718049240202919, guid: 2ef789c45f10b664792ff44380a8f204, type: 3}
 --- !u!114 &8209404048990989294
 MonoBehaviour:
@@ -956,11 +966,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e244a12e4e7027748a28164513a96717, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _calldownTime: 10
+  _layerMaskClick:
+    serializedVersion: 2
+    m_Bits: 128
+  _calldownTime: 12
   _icon: {fileID: 21300000, guid: 25d9167e34adaeb408ebb326d4e963f7, type: 3}
-  _description: 
-  _radiusDefeat: 5
+  _description: Does not deal damage, but stuns
+  _radiusDefeat: 3
   _grenadeTeamplate: {fileID: 5660116877592530592, guid: 05e502d81973f524e8dc41d33b509d43, type: 3}
+--- !u!114 &5452223578822444161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8335955560837383164}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f03de11176858542a24f904c9a5a9ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _layerMaskClick:
+    serializedVersion: 2
+    m_Bits: 128
+  _calldownTime: 15
+  _icon: {fileID: 21300000, guid: 351e3ac09305e664db0494d7d6b804b7, type: 3}
+  _description: Blitz Attack
+  _radiusDefeat: 7
+  _layerMaskForTarget:
+    serializedVersion: 2
+    m_Bits: 64
+  _damage: 10
+  _slashParticaleTemplate: {fileID: 305841288057985082, guid: 8e223081dd477b241995a881183f03e9, type: 3}
 --- !u!1 &9035187648112993200
 GameObject:
   m_ObjectHideFlags: 0

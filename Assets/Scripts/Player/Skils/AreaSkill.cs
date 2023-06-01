@@ -17,7 +17,6 @@ public abstract class AreaSkill : Skill
     protected override void Awake()
     {
         _affectedArea = GetComponent<AffectedAreaDrawer>();
-        SetLayerMaskClick(LayerMask.GetMask("Ground"));
         base.Awake();
     }
 
