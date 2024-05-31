@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class Building : MonoBehaviour
 {
-    [SerializeField] private int _maxhealth = 20;
+    [SerializeField] private int _maxhealth = 19;
     [SerializeField] private GameObject _gem;
     [SerializeField] private ParticleSystem _effectOfDestruction;
 
